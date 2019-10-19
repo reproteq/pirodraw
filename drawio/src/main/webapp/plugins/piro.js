@@ -65,7 +65,7 @@ para que cuente tiempos tiene que estar puesto ya en la figura , o clikar 2 vece
 // FUNCION UI MAIN //////////////////////////////////////////////////////////////////////////////////////
 Draw.loadPlugin(function(ui) {
  mxLog.show();//mostrar consola mxgraph modo debuger
-  mxLog.debug('Drawio piro.js Author TT 2019');
+  mxLog.debug('Pirodraw piro.js Author TT 2019');
   mxLog.debug('Start ... OK');
 //// cargar Sidebar libs xml ///////////////////////////////////////////////
 var url1 = 'Lib/baterias.xml';
