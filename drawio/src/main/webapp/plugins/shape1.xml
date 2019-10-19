@@ -1,0 +1,47 @@
+<shape name="bat1" h="190" w="18" aspect="variable" strokewidth="inherit">
+
+  <background>
+    <rect x="0" y="0" w="18" h="190"/>
+  </background>
+
+  <foreground>
+
+    <fillstroke/>
+
+    <ellipse x="0" y="0" w="18" h="18"/>
+    <fillstroke/>
+    
+    <ellipse x="0" y="18" w="18" h="18"/>
+    <fillstroke/>
+
+     <ellipse x="0" y="36" w="18" h="18"/>
+    <fillstroke/>
+    
+     <ellipse x="0" y="54" w="18" h="18"/>
+    <fillstroke/>
+    
+    <ellipse x="0" y="72" w="18" h="18"/>
+    <fillstroke/>
+    
+    <ellipse x="0" y="90" w="18" h="18"/>
+    <fillstroke/>
+    
+    <ellipse x="0" y="108" w="18" h="18"/>
+    <fillstroke/>
+    
+    <ellipse x="0" y="126" w="18" h="18"/>
+    <fillstroke/>
+    
+    <ellipse x="0" y="144" w="18" h="18"/>
+    <fillstroke/>
+    
+    <ellipse x="0" y="162" w="18" h="18"/>
+    <fillstroke/>
+   
+    <stroke/>
+
+   <text str="7.5" x="3" y="3" align="left" valign="top" vertical="0" rotation="0.0" align-shape="1"/>
+
+  </foreground>
+
+</shape>
