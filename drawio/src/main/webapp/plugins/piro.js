@@ -185,11 +185,41 @@ PiroDivPanelEfectos.appendChild(selectList_piro_efectos);
 //Create and append the options
 for (var i = 0; i < array_piro_efectos.length; i++)
 	{
-		var option = document.createElement("option");
-		option.setAttribute("value", array_piro_efectos[i]);
-		option.text = array_piro_efectos[i];
-		selectList_piro_efectos.appendChild(option);
+		var optionEfectos = document.createElement("option");
+		optionEfectos.setAttribute("value", array_piro_efectos[i]);
+		optionEfectos.text = array_piro_efectos[i];
+		selectList_piro_efectos.appendChild(optionEfectos);
 	}
+ 
+ 
+  /////////////input text efectos
+var inputEfectos = document.createElement("input");
+PiroDivPanelEfectos.appendChild(inputEfectos);
+ 
+ 
+  /////////////btn add efectos
+  var BtnAdinputEfectos = document.createElement("input");
+   BtnAdinputEfectos.setAttribute("type", "button");
+   BtnAdinputEfectos.setAttribute("name", "button");
+   BtnAdinputEfectos.setAttribute("value", "+");
+   PiroDivPanelEfectos.appendChild(BtnAdinputEfectos);
+ 
+ 
+   BtnAdinputEfectos.onclick = function(){
+    
+    var option = document.createElement("option");
+    option.text = inputEfectos.value;
+    option.value = inputEfectos.value;
+    var select = document.getElementById("Select_piro_efectos");
+    select.appendChild(option);
+    //alert(inputEfectos.value + "/"+ "");
+    return false;
+    };
+
+  	 
+ 
+ //selectList_piro_efectos.appendChild(optionEfectos);
+ 
 ///////fin PiroDivPanelEfectos select efectos y checkbox ////////////////////////
     
 
