@@ -68,7 +68,7 @@ ss.type = "text/css";
 ss.rel = "stylesheet";
 ss.href = "styles/piro.css";
 document.getElementsByTagName("head")[0].appendChild(ss);
- 
+ mxLog.debug('Load styles/piro.css  ... OK ');
 //// cargar Sidebar libs xml ///////////////////////////////////////////////
 var url1 = 'Lib/baterias.xml';
 mxLog.debug('Load ' + url1 +' ... OK ');
@@ -116,26 +116,19 @@ txtGetPiroEfectos("efectos.txt", function(textFile){
 ////////////////////////fin txt to array txtGetPiroEfectos///////////////////////////////////////
  
  ////panel PiroDivPanel /////////////////////////////////////////////////
-var div_tag = document.createElement('div');
-div_tag.id = 'PiroDivPanel';
-div_tag.setAttribute('class', 'class_PiroDiv');
-    if (!ui.editor.chromeless)
-    {
-     div_tag.setAttribute('class', 'class_PiroDivPanel class_PiroDiv');
-    }  
-div_tag.innerHTML = '<h3> Piro Panel </h3>';
-document.body.appendChild(div_tag);
+var div_tagTitle = document.createElement('div');
+div_tagTitle.id = 'PiroDivPanel';
+div_tagTitle.setAttribute('class', 'class_PiroDiv');
+if (!ui.editor.chromeless){div_tagTitle.setAttribute('class', 'class_PiroDivPanel class_PiroDiv');}  
+div_tagTitle.innerHTML = '<h3> Pirodraw Control Panel </h3>';
+document.body.appendChild(div_tagTitle);
 ////fin PiroDivPanelTag ///////////////////////////////////////////////
   
 ////panel PiroDivPanelTag /////////////////////////////////////////////////
 var div_tag = document.createElement('div');
 div_tag.id = 'PiroDiv';
 div_tag.setAttribute('class', 'class_PiroDivPanelTag');
-    if (!ui.editor.chromeless)
-    {
-     div_tag.setAttribute('class', 'class_PiroDivPanelTag class_PiroDiv');
-    }
-  
+if (!ui.editor.chromeless){div_tag.setAttribute('class', 'class_PiroDivPanelTag class_PiroDiv');}  
 div_tag.innerHTML = '<p><i>Selecciona un objeto ...</i></p>';
 document.body.appendChild(div_tag);
 ////fin PiroDivPanelTag ///////////////////////////////////////////////
@@ -146,10 +139,7 @@ var div_efectos = document.createElement('div');
 div_efectos.id = 'PiroDivPanelEfectos';
 div_efectos.setAttribute('class', 'class_PiroDiv');
 div_efectos.innerText = "Efectos";
-	if (!ui.editor.chromeless)
-	{
-  div_efectos.setAttribute('class', 'class_PiroDivPanelEfectos class_PiroDiv');
-	}
+if (!ui.editor.chromeless){div_efectos.setAttribute('class', 'class_PiroDivPanelEfectos class_PiroDiv');}
 document.body.appendChild(div_efectos);
 /////fin PiroDivPanelEfectos /////////////////////////////////////////////////
    
@@ -208,10 +198,7 @@ var div_cadencia = document.createElement('div');
 div_cadencia.id = 'PiroDivPanelCadencia';
 div_cadencia.setAttribute('class', 'class_PiroDiv');
 div_cadencia.innerText = "Cadencia";
-	if (!ui.editor.chromeless)
-	{
-  div_cadencia.setAttribute('class', 'class_PiroDivPanelCadencia class_PiroDiv');
-	}
+if (!ui.editor.chromeless){div_cadencia.setAttribute('class', 'class_PiroDivPanelCadencia class_PiroDiv');}
 document.body.appendChild(div_cadencia);
 /////fin PiroDivPanelCadencia /////////////////////////////////////////////////
    
@@ -248,10 +235,7 @@ var div_lineas = document.createElement('div');
 div_lineas.id = 'PiroDivPanelLineas';
 div_lineas.setAttribute('class', 'class_PiroDiv');
 div_lineas.innerText = "Lineas";
-	if (!ui.editor.chromeless)
-	{
-  div_lineas.setAttribute('class', 'class_PiroDivPanelLineas class_PiroDiv');
-	}
+if (!ui.editor.chromeless){div_lineas.setAttribute('class', 'class_PiroDivPanelLineas class_PiroDiv');}
 document.body.appendChild(div_lineas);
 /////fin PiroDivPanelLineas /////////////////////////////////////////////////
 
@@ -274,23 +258,12 @@ PiroDivPanelLinea.appendChild(selectList_piro_lineas);
 //Create and append the options 
 ///////fin PiroDivPanelLinea select   y checkbox ////////////////////////
 
-
-
 ////panel PiroDivPanelviewer /////////////////////////////////////////////////
 var div_viewer = document.createElement('div');
 div_viewer.id = 'PiroDivPanelViewer';
 div_viewer.setAttribute('class', 'class_PiroDiv');
 div_viewer.innerText = "Label";
-//div_viewer.style.minWidth = '200px';
-	
-//var graph = ui.editor.graph;
-	// Made for chromeless mode
-	if (!ui.editor.chromeless)
-	{
-  div_viewer.setAttribute('class', 'class_PiroDivPanelViewer class_PiroDiv');
-	//	div_viewer.style.top = '193px';
-		//div_viewer.style.right = '260px';
-	}
+if (!ui.editor.chromeless){div_viewer.setAttribute('class', 'class_PiroDivPanelViewer class_PiroDiv');}
 document.body.appendChild(div_viewer);
 /////fin PiroDivPanelviewers /////////////////////////////////////////////////
    
@@ -326,10 +299,7 @@ var div_timeline = document.createElement('div');
 div_timeline.id = 'PiroDivPanelTimeline';
 div_timeline.setAttribute('class', 'class_PiroDiv');
 div_timeline.innerText = "TimeLine";
-	if (!ui.editor.chromeless)
-	{
-  div_timeline.setAttribute('class', 'class_PiroDivPanelTimeline class_PiroDiv');
-	}
+if (!ui.editor.chromeless){div_timeline.setAttribute('class', 'class_PiroDivPanelTimeline class_PiroDiv');}
 document.body.appendChild(div_timeline);
 /////fin PiroDivPaneltimelines /////////////////////////////////////////////////
    
