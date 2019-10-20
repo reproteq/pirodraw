@@ -123,8 +123,9 @@ div_tag.setAttribute('class', 'class_PiroDivPanelTag');
 // Made for chromeless mode
     if (!ui.editor.chromeless)
     {
-	    div_tag.style.top = '260px';
-	    div_tag.style.right = '260px';
+     div_tag.setAttribute('class', 'class_PiroDivPanelTag class_PiroDivPanelTag2');
+   //  div_tag.style.top = '260px';
+	    //div_tag.style.right = '260px';
     }
   
 div_tag.innerHTML = '<p><i>Selecciona un objeto ...</i></p>';
@@ -137,13 +138,14 @@ var div_efectos = document.createElement('div');
 div_efectos.id = 'PiroDivPanelEfectos';
 div_efectos.setAttribute('class', 'class_PiroDivPanelEfectos');
 div_efectos.innerText = "Efectos";
-div_efectos.style.minWidth = '200px';
+//div_efectos.style.minWidth = '200px';
 //var graph = ui.editor.graph;
 	// Made for chromeless mode
 	if (!ui.editor.chromeless)
 	{
-		div_efectos.style.top = '100px';
-		div_efectos.style.right = '260px';
+  div_efectos.setAttribute('class', 'class_PiroDivPanelEfectos class_PiroDivPanelEfectos2');
+	//	div_efectos.style.top = '100px';
+		//div_efectos.style.right = '260px';
 	}
 document.body.appendChild(div_efectos);
 /////fin PiroDivPanelEfectos /////////////////////////////////////////////////
@@ -209,8 +211,9 @@ div_cadencia.innerText = "Cadencia";
 	// Made for chromeless mode
 	if (!ui.editor.chromeless)
 	{
-		div_cadencia.style.top = '130px';
-		div_cadencia.style.right = '260px';
+  div_cadencia.setAttribute('class', 'class_PiroDivPanelCadencia class_PiroDivPanelCadencia2');
+		//div_cadencia.style.top = '130px';
+		//div_cadencia.style.right = '260px';
 	}
 document.body.appendChild(div_cadencia);
 /////fin PiroDivPanelCadencia /////////////////////////////////////////////////
@@ -254,8 +257,9 @@ div_lineas.innerText = "Lineas";
 	// Made for chromeless mode
 	if (!ui.editor.chromeless)
 	{
-		div_lineas.style.top = '163px';
-		div_lineas.style.right = '260px';
+  div_lineas.setAttribute('class', 'class_PiroDivPanelLineas class_PiroDivPanelLineas2');
+	//	div_lineas.style.top = '163px';
+		// div_lineas.style.right = '260px';
 	}
 document.body.appendChild(div_lineas);
 /////fin PiroDivPanelLineas /////////////////////////////////////////////////
@@ -292,8 +296,9 @@ div_viewer.innerText = "Label";
 	// Made for chromeless mode
 	if (!ui.editor.chromeless)
 	{
-		div_viewer.style.top = '193px';
-		div_viewer.style.right = '260px';
+  div_viewer.setAttribute('class', 'class_PiroDivPanelViewer class_PiroDivPanelViewer2');
+	//	div_viewer.style.top = '193px';
+		//div_viewer.style.right = '260px';
 	}
 document.body.appendChild(div_viewer);
 /////fin PiroDivPanelviewers /////////////////////////////////////////////////
@@ -339,8 +344,9 @@ div_timeline.innerText = "TimeLine";
 	// Made for chromeless mode
 	if (!ui.editor.chromeless)
 	{
-		div_timeline.style.top = '223px';
-		div_timeline.style.right = '260px';
+  div_timeline.setAttribute('class', 'class_PiroDivPanelTimeline class_PiroDivPanelTimeline2');
+	//	div_timeline.style.top = '223px';
+		//div_timeline.style.right = '260px';
 	}
 document.body.appendChild(div_timeline);
 /////fin PiroDivPaneltimelines /////////////////////////////////////////////////
