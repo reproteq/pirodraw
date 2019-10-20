@@ -26,9 +26,7 @@ para mejorar///
     <mxCell id="0"/>
     <mxCell id="1" parent="0"/>
   </root>
-</mxGraphModel>
-
-  
+</mxGraphModel>  
   
 <mxGraphModel dx="717" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
   <root>
@@ -36,7 +34,6 @@ para mejorar///
     <mxCell id="r-UZ8igVGSpfonwKMBKW-1" parent="r-UZ8igVGSpfonwKMBKW-0"/>
   </root>
 </mxGraphModel>
-
 
 <mxGraphModel dx="717" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
   <root>
@@ -50,10 +47,7 @@ para mejorar///
   </root>
 </mxGraphModel>
 
-
-
 2-generar una pagina de listado con toda info parseada piruli
-
 
 bug/////
 1-si clikamos procesar i estan atributos selecionados se cambiaran todos los de las fijuras a dichos valores
@@ -64,9 +58,17 @@ para que cuente tiempos tiene que estar puesto ya en la figura , o clikar 2 vece
 
 // FUNCION UI MAIN //////////////////////////////////////////////////////////////////////////////////////
 Draw.loadPlugin(function(ui) {
- mxLog.show();//mostrar consola mxgraph modo debuger
-  mxLog.debug('Drawio piro.js Author TT 2019');
+  mxLog.show();//mostrar consola mxgraph modo debuger
+  mxLog.debug('Pirodraw piro.js Author TT 2019');
   mxLog.debug('Start ... OK');
+  
+  /////////////add piro.css 
+var ss = document.createElement("link");
+ss.type = "text/css";
+ss.rel = "stylesheet";
+ss.href = "styles/piro.css";
+document.getElementsByTagName("head")[0].appendChild(ss);
+ 
 //// cargar Sidebar libs xml ///////////////////////////////////////////////
 var url1 = 'Lib/baterias.xml';
 mxLog.debug('Load ' + url1 +' ... OK ');
@@ -85,15 +87,12 @@ var graph = ui.editor.graph;
 var piro_name = [];
 var piro_disparos = ['0','1','3','5','10','20','30','50'];
 var array_piro_lineas = []; // array de lineas
-
 var array_piro_id = []; //declaramos array gloval id de fiuguras
 var array_piro_name = []; //declaramos array gloval name de figuras
 var array_pagina_id = [];
 var array_piro_id_time = []; // guardara tiempo = cadencia x disparos
  var array_piro_efectos = []; // array  guardara los efectos leidos de un txt
 var strLabelCustom = "%Name% %Disparos% %Cadencia% %Efecto%  %Linea%";
-
-
 /////fin variables y arrays /////////////////////////////////////////////////
 
 /////////////////////////////txt to array txtGetPiroEfectos///////////////////////////////////
@@ -109,27 +108,18 @@ function txtGetPiroEfectos(palabra, callback) {
 }
 
 txtGetPiroEfectos("efectos.txt", function(textFile){
-   array_piro_efectos = textFile.slice(1, -1).split(",");
+     array_piro_efectos = textFile.slice(1, -1).split(",");
      mxLog.debug('Load efectos.txt ... OK');
   //  alert(array_piro_efectos);
 });
 
 ////////////////////////fin txt to array txtGetPiroEfectos///////////////////////////////////////
-
  
 ////panel PiroDivPanelTag /////////////////////////////////////////////////
 var div_tag = document.createElement('div');
 div_tag.id = 'PiroDivPanelTag';
-div_tag.style.background = '#ffffff';
-div_tag.style.border = '1px solid gray';
-div_tag.style.opacity = '0.8';
-div_tag.style.position = 'absolute';
-div_tag.style.padding = '10px';
-div_tag.style.paddingTop = '0px';
-div_tag.style.width = '20%';
-div_tag.style.minWidth = '200px';
-div_tag.style.top = '100px';
-div_tag.style.right = '20px';
+div_tag.setAttribute('class', 'class_PiroDivPanelTag');
+ //div_tag.style.minWidth = '200px';
 // Made for chromeless mode
     if (!ui.editor.chromeless)
     {
@@ -145,17 +135,9 @@ document.body.appendChild(div_tag);
 ////panel PiroDivPanelEfectos /////////////////////////////////////////////////
 var div_efectos = document.createElement('div');
 div_efectos.id = 'PiroDivPanelEfectos';
+div_efectos.setAttribute('class', 'class_PiroDivPanelEfectos');
 div_efectos.innerText = "Efectos";
-div_efectos.style.background = '#ffffff';
-div_efectos.style.border = '1px solid gray';
-div_efectos.style.opacity = '0.8';
-div_efectos.style.position = 'absolute';
-div_efectos.style.padding = '10px';
-div_efectos.style.paddingTop = '0px';
-div_efectos.style.width = '20%';
 div_efectos.style.minWidth = '200px';
-div_efectos.style.top = '40px';
-div_efectos.style.right = '20px';	
 //var graph = ui.editor.graph;
 	// Made for chromeless mode
 	if (!ui.editor.chromeless)
@@ -185,29 +167,44 @@ PiroDivPanelEfectos.appendChild(selectList_piro_efectos);
 //Create and append the options
 for (var i = 0; i < array_piro_efectos.length; i++)
 	{
-		var option = document.createElement("option");
-		option.setAttribute("value", array_piro_efectos[i]);
-		option.text = array_piro_efectos[i];
-		selectList_piro_efectos.appendChild(option);
+		var optionEfectos = document.createElement("option");
+		optionEfectos.setAttribute("value", array_piro_efectos[i]);
+		optionEfectos.text = array_piro_efectos[i];
+		selectList_piro_efectos.appendChild(optionEfectos);
 	}
-///////fin PiroDivPanelEfectos select efectos y checkbox ////////////////////////
+ 
+  /////////////input text efectos
+  var inputEfectos = document.createElement("input");
+  PiroDivPanelEfectos.appendChild(inputEfectos); 
+ 
+   /////////////btn add efectos
+   var BtnAdinputEfectos = document.createElement("input");
+   BtnAdinputEfectos.setAttribute("type", "button");
+   BtnAdinputEfectos.setAttribute("name", "button");
+   BtnAdinputEfectos.setAttribute("value", "+");
+   PiroDivPanelEfectos.appendChild(BtnAdinputEfectos);
+ 
+ 
+   BtnAdinputEfectos.onclick = function(){
+    alert("Nueva opcion " + inputEfectos.value + " se agrego con exito");
+    var option = document.createElement("option");
+    option.text = inputEfectos.value;
+    option.value = inputEfectos.value;
+    var select = document.getElementById("Select_piro_efectos");
+    select.appendChild(option);
+   
+    return false;
+    };
+    /////////////fin btn add efectos
     
-
+///////fin PiroDivPanelEfectos select efectos y checkbox ////////////////////////    
 
 ////panel PiroDivPanel cadencia /////////////////////////////////////////////////
 var div_cadencia = document.createElement('div');
 div_cadencia.id = 'PiroDivPanelCadencia';
+div_cadencia.setAttribute('class', 'class_PiroDivPanelCadencia');
 div_cadencia.innerText = "Cadencia";
-div_cadencia.style.background = '#ffffff';
-div_cadencia.style.border = '1px solid gray';
-div_cadencia.style.opacity = '0.8';
-div_cadencia.style.position = 'absolute';
-div_cadencia.style.padding = '10px';
-div_cadencia.style.paddingTop = '0px';
-div_cadencia.style.width = '20%';
-div_cadencia.style.minWidth = '200px';
-div_cadencia.style.top = '40px';
-div_cadencia.style.right = '20px';	
+
 //var graph = ui.editor.graph;
 	// Made for chromeless mode
 	if (!ui.editor.chromeless)
@@ -242,22 +239,17 @@ for (var i = 0; i < array_piro_cadencia.length; i++)
 		option.text = array_piro_cadencia[i];
 		selectList_piro_cadencia.appendChild(option);
 	}
+ 
+ 
 ///////fin PiroDivPanelCadencia select cadencia y checkbox ////////////////////////
 
 ////panel PiroDivPanelLinea /////////////////////////////////////////////////
 var div_lineas = document.createElement('div');
 div_lineas.id = 'PiroDivPanelLineas';
+div_lineas.setAttribute('class', 'class_PiroDivPanelLineas');
 div_lineas.innerText = "Lineas";
-div_lineas.style.background = '#ffffff';
-div_lineas.style.border = '1px solid gray';
-div_lineas.style.opacity = '0.8';
-div_lineas.style.position = 'absolute';
-div_lineas.style.padding = '10px';
-div_lineas.style.paddingTop = '0px';
-div_lineas.style.width = '20%';
-div_lineas.style.minWidth = '200px';
-div_lineas.style.top = '40px';
-div_lineas.style.right = '20px';	
+//div_lineas.style.minWidth = '200px';
+ 
 //var graph = ui.editor.graph;
 	// Made for chromeless mode
 	if (!ui.editor.chromeless)
@@ -292,17 +284,10 @@ PiroDivPanelLinea.appendChild(selectList_piro_lineas);
 ////panel PiroDivPanelviewer /////////////////////////////////////////////////
 var div_viewer = document.createElement('div');
 div_viewer.id = 'PiroDivPanelViewer';
+div_viewer.setAttribute('class', 'class_PiroDivPanelViewer');
 div_viewer.innerText = "Label";
-div_viewer.style.background = '#ffffff';
-div_viewer.style.border = '1px solid gray';
-div_viewer.style.opacity = '0.8';
-div_viewer.style.position = 'absolute';
-div_viewer.style.padding = '10px';
-div_viewer.style.paddingTop = '0px';
-div_viewer.style.width = '20%';
-div_viewer.style.minWidth = '200px';
-div_viewer.style.top = '40px';
-div_viewer.style.right = '20px';	
+//div_viewer.style.minWidth = '200px';
+	
 //var graph = ui.editor.graph;
 	// Made for chromeless mode
 	if (!ui.editor.chromeless)
@@ -347,17 +332,9 @@ for (var i = 0; i < array_piro_viewer.length; i++)
 ////panel PiroDivPaneltimeline /////////////////////////////////////////////////
 var div_timeline = document.createElement('div');
 div_timeline.id = 'PiroDivPanelTimeline';
+div_timeline.setAttribute('class', 'class_PiroDivPanelTimeline');
 div_timeline.innerText = "TimeLine";
-div_timeline.style.background = '#ffffff';
-div_timeline.style.border = '1px solid gray';
-div_timeline.style.opacity = '0.8';
-div_timeline.style.position = 'absolute';
-div_timeline.style.padding = '10px';
-div_timeline.style.paddingTop = '0px';
-div_timeline.style.width = '20%';
-div_timeline.style.minWidth = '200px';
-div_timeline.style.top = '40px';
-div_timeline.style.right = '20px';	
+//div_timeline.style.minWidth = '200px';	
 //var graph = ui.editor.graph;
 	// Made for chromeless mode
 	if (!ui.editor.chromeless)
@@ -395,14 +372,10 @@ for (var i = 0; i < array_piro_timeline.length; i++)
 ///////fin PiroDivPaneltimeline select viewer y checkbox ////////////////////////
 
 
-
-
 //funciones recount alls objects///////////////////////////////////////////////////////
 //funcion que recorera todos los objetos recogera en arrays los valores
-
-
-
 //funciones para current cell  //////////////////////////////////////////////////////
+
 var highlight = new mxCellHighlight(graph, '#00ff00', 8);
 
 function cellClicked(cell)
