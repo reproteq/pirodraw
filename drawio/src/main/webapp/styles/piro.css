@@ -1,5 +1,5 @@
-.class_PiroDivPanelTag{   
- 	background-color:#ffffff;
+.class_PiroDiv{   
+ 	background-color:#f4f4f4;
     border:1px solid #c0c0c0;
     opacity: 0.7;
     position: absolute;
@@ -9,94 +9,38 @@
     top:100px;
     right:20px;
 }
-.class_PiroDivPanelTag2{
-    top:260px;
+
+.class_PiroDivPanel{
+    top:101px;
     right:260px; 
 }
 
-
 .class_PiroDivPanelEfectos{
- 	background-color:#ffffff;
-    border:1px solid #c0c0c0;
-    opacity: 0.7;
-    position: absolute;
-    padding:10px;
-    padding-top:0px;
-    width:20%;
-    top:40px;
-    right:20px;    
-
-}
-.class_PiroDivPanelEfectos2{
-    	top:100px;
-		right:260px;
-}
-
-.class_PiroDivPanelCadencia{
- 	background-color:#ffffff;
-    border:1px solid #c0c0c0;
-    opacity: 0.7;
-    position: absolute;
-    padding:10px;
-    padding-top:0px;
-    width:20%;
-    top:40px;
-    right:20px;
-    
-}
-.class_PiroDivPanelCadencia2{
-    	top:130px;
-		right:260px;
-}
-
-
-.class_PiroDivPanelLineas{
- 	background-color:#ffffff;
-    border:1px solid #c0c0c0;
-    opacity: 0.7;
-    position: absolute;
-    padding:10px;
-    padding-top:0px;
-    width:20%;
-    top:40px;
-    right:20px;    
-
-}
-.class_PiroDivPanelLineas2{
     	top:163px;
 		right:260px;
 }
 
+.class_PiroDivPanelCadencia{
+    	top:196px;
+		right:260px;
+}
+
+.class_PiroDivPanelLineas{
+    	top:226px;
+		right:260px;
+}
 
 .class_PiroDivPanelViewer{
-  	background-color:#ffffff;
-    border:1px solid #c0c0c0;
-    opacity: 0.7;
-    position: absolute;
-    padding:10px;
-    padding-top:0px;
-    width:20%;
-    top:40px;
-    right:20px;    
-}
-.class_PiroDivPanelViewer2{
-    	top:193px;
+    	top:259px;
 		right:260px;
 }
-
 
 .class_PiroDivPanelTimeline{
-  	background-color:#ffffff;
-    border:1px solid #c0c0c0;
-    opacity: 0.7;
-    position: absolute;
-    padding:10px;
-    padding-top:0px;
-    width:20%;
-    top:40px;
-    right:20px;    
-}
-.class_PiroDivPanelTimeline2{
-    	top:223px;
+    	top:290px;
 		right:260px;
+}
+
+.class_PiroDivPanelTag{
+    top:321px;
+    right:260px; 
 }

@@ -115,17 +115,25 @@ txtGetPiroEfectos("efectos.txt", function(textFile){
 
 ////////////////////////fin txt to array txtGetPiroEfectos///////////////////////////////////////
  
-////panel PiroDivPanelTag /////////////////////////////////////////////////
+ ////panel PiroDivPanel /////////////////////////////////////////////////
 var div_tag = document.createElement('div');
-div_tag.id = 'PiroDivPanelTag';
-div_tag.setAttribute('class', 'class_PiroDivPanelTag');
- //div_tag.style.minWidth = '200px';
-// Made for chromeless mode
+div_tag.id = 'PiroDivPanel';
+div_tag.setAttribute('class', 'class_PiroDiv');
     if (!ui.editor.chromeless)
     {
-     div_tag.setAttribute('class', 'class_PiroDivPanelTag class_PiroDivPanelTag2');
-   //  div_tag.style.top = '260px';
-	    //div_tag.style.right = '260px';
+     div_tag.setAttribute('class', 'class_PiroDivPanel class_PiroDiv');
+    }  
+div_tag.innerHTML = '<h3> Piro Panel </h3>';
+document.body.appendChild(div_tag);
+////fin PiroDivPanelTag ///////////////////////////////////////////////
+  
+////panel PiroDivPanelTag /////////////////////////////////////////////////
+var div_tag = document.createElement('div');
+div_tag.id = 'PiroDiv';
+div_tag.setAttribute('class', 'class_PiroDivPanelTag');
+    if (!ui.editor.chromeless)
+    {
+     div_tag.setAttribute('class', 'class_PiroDivPanelTag class_PiroDiv');
     }
   
 div_tag.innerHTML = '<p><i>Selecciona un objeto ...</i></p>';
@@ -136,16 +144,11 @@ document.body.appendChild(div_tag);
 ////panel PiroDivPanelEfectos /////////////////////////////////////////////////
 var div_efectos = document.createElement('div');
 div_efectos.id = 'PiroDivPanelEfectos';
-div_efectos.setAttribute('class', 'class_PiroDivPanelEfectos');
+div_efectos.setAttribute('class', 'class_PiroDiv');
 div_efectos.innerText = "Efectos";
-//div_efectos.style.minWidth = '200px';
-//var graph = ui.editor.graph;
-	// Made for chromeless mode
 	if (!ui.editor.chromeless)
 	{
-  div_efectos.setAttribute('class', 'class_PiroDivPanelEfectos class_PiroDivPanelEfectos2');
-	//	div_efectos.style.top = '100px';
-		//div_efectos.style.right = '260px';
+  div_efectos.setAttribute('class', 'class_PiroDivPanelEfectos class_PiroDiv');
 	}
 document.body.appendChild(div_efectos);
 /////fin PiroDivPanelEfectos /////////////////////////////////////////////////
@@ -159,9 +162,8 @@ checkbox_selectList_piro_efectos.setAttribute("name", "checkbox_selectList_piro_
 checkbox_selectList_piro_efectos.setAttribute("value", "ff");
 // cambiar a true para que salga por defetcto activado
 checkbox_selectList_piro_efectos.checked = false; 
-PiroDivPanelEfectos.appendChild(checkbox_selectList_piro_efectos); 
-//array de options
-// var array_piro_efectos = ['TTT','BC','TRUENO','KAMURO','COLOR','CRACK','RONCADOR',''];
+PiroDivPanelEfectos.appendChild(checkbox_selectList_piro_efectos);
+
 //Create and append select list
 var selectList_piro_efectos = document.createElement("select");
 selectList_piro_efectos.setAttribute("id", "Select_piro_efectos");
@@ -204,16 +206,11 @@ for (var i = 0; i < array_piro_efectos.length; i++)
 ////panel PiroDivPanel cadencia /////////////////////////////////////////////////
 var div_cadencia = document.createElement('div');
 div_cadencia.id = 'PiroDivPanelCadencia';
-div_cadencia.setAttribute('class', 'class_PiroDivPanelCadencia');
+div_cadencia.setAttribute('class', 'class_PiroDiv');
 div_cadencia.innerText = "Cadencia";
-
-//var graph = ui.editor.graph;
-	// Made for chromeless mode
 	if (!ui.editor.chromeless)
 	{
-  div_cadencia.setAttribute('class', 'class_PiroDivPanelCadencia class_PiroDivPanelCadencia2');
-		//div_cadencia.style.top = '130px';
-		//div_cadencia.style.right = '260px';
+  div_cadencia.setAttribute('class', 'class_PiroDivPanelCadencia class_PiroDiv');
 	}
 document.body.appendChild(div_cadencia);
 /////fin PiroDivPanelCadencia /////////////////////////////////////////////////
@@ -249,17 +246,11 @@ for (var i = 0; i < array_piro_cadencia.length; i++)
 ////panel PiroDivPanelLinea /////////////////////////////////////////////////
 var div_lineas = document.createElement('div');
 div_lineas.id = 'PiroDivPanelLineas';
-div_lineas.setAttribute('class', 'class_PiroDivPanelLineas');
+div_lineas.setAttribute('class', 'class_PiroDiv');
 div_lineas.innerText = "Lineas";
-//div_lineas.style.minWidth = '200px';
- 
-//var graph = ui.editor.graph;
-	// Made for chromeless mode
 	if (!ui.editor.chromeless)
 	{
-  div_lineas.setAttribute('class', 'class_PiroDivPanelLineas class_PiroDivPanelLineas2');
-	//	div_lineas.style.top = '163px';
-		// div_lineas.style.right = '260px';
+  div_lineas.setAttribute('class', 'class_PiroDivPanelLineas class_PiroDiv');
 	}
 document.body.appendChild(div_lineas);
 /////fin PiroDivPanelLineas /////////////////////////////////////////////////
@@ -288,7 +279,7 @@ PiroDivPanelLinea.appendChild(selectList_piro_lineas);
 ////panel PiroDivPanelviewer /////////////////////////////////////////////////
 var div_viewer = document.createElement('div');
 div_viewer.id = 'PiroDivPanelViewer';
-div_viewer.setAttribute('class', 'class_PiroDivPanelViewer');
+div_viewer.setAttribute('class', 'class_PiroDiv');
 div_viewer.innerText = "Label";
 //div_viewer.style.minWidth = '200px';
 	
@@ -296,7 +287,7 @@ div_viewer.innerText = "Label";
 	// Made for chromeless mode
 	if (!ui.editor.chromeless)
 	{
-  div_viewer.setAttribute('class', 'class_PiroDivPanelViewer class_PiroDivPanelViewer2');
+  div_viewer.setAttribute('class', 'class_PiroDivPanelViewer class_PiroDiv');
 	//	div_viewer.style.top = '193px';
 		//div_viewer.style.right = '260px';
 	}
@@ -330,23 +321,14 @@ for (var i = 0; i < array_piro_viewer.length; i++)
 ///////fin PiroDivPanelviewer select viewer y checkbox ////////////////////////
 
 
-
-
-
-
 ////panel PiroDivPaneltimeline /////////////////////////////////////////////////
 var div_timeline = document.createElement('div');
 div_timeline.id = 'PiroDivPanelTimeline';
-div_timeline.setAttribute('class', 'class_PiroDivPanelTimeline');
+div_timeline.setAttribute('class', 'class_PiroDiv');
 div_timeline.innerText = "TimeLine";
-//div_timeline.style.minWidth = '200px';	
-//var graph = ui.editor.graph;
-	// Made for chromeless mode
 	if (!ui.editor.chromeless)
 	{
-  div_timeline.setAttribute('class', 'class_PiroDivPanelTimeline class_PiroDivPanelTimeline2');
-	//	div_timeline.style.top = '223px';
-		//div_timeline.style.right = '260px';
+  div_timeline.setAttribute('class', 'class_PiroDivPanelTimeline class_PiroDiv');
 	}
 document.body.appendChild(div_timeline);
 /////fin PiroDivPaneltimelines /////////////////////////////////////////////////
