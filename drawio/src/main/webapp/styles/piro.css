@@ -1,0 +1,80 @@
+.class_PiroDivPanelTag{   
+ 	background-color:#ffffff;
+    border:1px solid #c0c0c0;
+    opacity: 0.7;
+    position: absolute;
+    padding:10px;
+    padding-top:0px;
+    width:20%;
+    top:100px;
+    right:20px;
+}
+
+
+
+.class_PiroDivPanelEfectos{
+ 	background-color:#ffffff;
+    border:1px solid #c0c0c0;
+    opacity: 0.7;
+    position: absolute;
+    padding:10px;
+    padding-top:0px;
+    width:20%;
+    top:40px;
+    right:20px;    
+
+}
+
+
+.class_PiroDivPanelCadencia{
+ 	background-color:#ffffff;
+    border:1px solid #c0c0c0;
+    opacity: 0.7;
+    position: absolute;
+    padding:10px;
+    padding-top:0px;
+    width:20%;
+    top:40px;
+    right:20px;
+    
+}
+
+
+.class_PiroDivPanelLineas{
+ 	background-color:#ffffff;
+    border:1px solid #c0c0c0;
+    opacity: 0.7;
+    position: absolute;
+    padding:10px;
+    padding-top:0px;
+    width:20%;
+    top:40px;
+    right:20px;    
+
+}
+
+
+.class_PiroDivPanelViewer{
+  	background-color:#ffffff;
+    border:1px solid #c0c0c0;
+    opacity: 0.7;
+    position: absolute;
+    padding:10px;
+    padding-top:0px;
+    width:20%;
+    top:40px;
+    right:20px;    
+}
+
+
+.class_PiroDivPanelTimeline{
+  	background-color:#ffffff;
+    border:1px solid #c0c0c0;
+    opacity: 0.7;
+    position: absolute;
+    padding:10px;
+    padding-top:0px;
+    width:20%;
+    top:40px;
+    right:20px;    
+}
