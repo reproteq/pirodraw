@@ -258,7 +258,7 @@ PiroDivPanelLinea.appendChild(selectList_piro_lineas);
 //Create and append the options 
 ///////fin PiroDivPanelLinea select   y checkbox ////////////////////////
 
-////panel PiroDivPanelviewer /////////////////////////////////////////////////
+////panel PiroDivPanelviewer label /////////////////////////////////////////////////
 var div_viewer = document.createElement('div');
 div_viewer.id = 'PiroDivPanelViewer';
 div_viewer.setAttribute('class', 'class_PiroDiv');
@@ -267,7 +267,7 @@ if (!ui.editor.chromeless){div_viewer.setAttribute('class', 'class_PiroDivPanelV
 document.body.appendChild(div_viewer);
 /////fin PiroDivPanelviewers /////////////////////////////////////////////////
    
-///////PiroDivPanelviewer select viewer y checkbox ////////////////////////
+///////PiroDivPanelviewer label select viewer y checkbox ////////////////////////
 var PiroDivPanelViewer = document.getElementById("PiroDivPanelViewer");
 var checkbox_selectList_piro_viewer = document.createElement("input");
 checkbox_selectList_piro_viewer.setAttribute("type", "checkbox");
